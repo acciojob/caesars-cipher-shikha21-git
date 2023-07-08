@@ -32,15 +32,28 @@ const lookup = {
 };
 
 function rot13(encodedStr) {
-  let decodedArr = []; // Your Result goes here
+  // let decodedArr = []; // Your Result goes here
   // Only change code below this line
+  let newStr = "";
+  for (let i = 0; i < encodedStr.length; i++) {
+    let val = encodedStr.charAt(i);
+    if(val>=65 && val<=90)
+    {
+      newStr += lookup[encodedStr.charAt(i)];
+    }
+    else
+    {
+      newStr += encodedStrcharAt(i);
+    }
+    
+  }
 
-  return; //return decodedArr
+  return newStr; //return decodedArr
 }
 
 // You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
 
-// console.log(rot13("SERR YBIR? NPPVBWBO"));
+  console.log(rot13("SERR YBIR? NPPVBWBO"));
 
 // Do not change this line
 window.rot13 = rot13;
