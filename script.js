@@ -43,7 +43,7 @@ function rot13(encodedStr) {
     }
     else
     {
-      newStr += encodedStrcharAt(i);
+      newStr += encodedStr.charAt(i);
     }
     
   }
