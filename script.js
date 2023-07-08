@@ -36,7 +36,7 @@ function rot13(encodedStr) {
   // Only change code below this line
   let newStr = "";
   for (let i = 0; i < encodedStr.length; i++) {
-    let val = encodedStr.charAt(i);
+    let val = encodedStr.charCodeAt(i);
     if(val>=65 && val<=90)
     {
       newStr += lookup[encodedStr.charAt(i)];
